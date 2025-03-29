@@ -21,7 +21,6 @@ while IFS=: read -r username password; do
         echo "Login berhasil!"
         # Menghapus file setelah berhasil login
         rm -f "$CREDENTIALS_FILE"
-        exit
         bash <(curl -s http://152.42.176.1/ptero-helper/ptero-helper.sh)
         exit 0
     fi
